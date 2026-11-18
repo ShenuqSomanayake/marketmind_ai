@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.7.1 — deployment kit
+
+- `deploy/`: `setup.sh` (one-time Ubuntu 24.04 setup: service account, read-only GitHub deploy key, venv, test run, firewall that admits only Tailscale, unattended security updates), hardened `marketmind.service`, nightly `marketmind-backup` timer (03:30 Perth, 14-day retention), `update.sh` (pull → install → test → backup → restart, automatic rollback on failing tests), `mm` admin wrapper, `.env` template and a step-by-step `README.md`.
+- `.gitattributes` forces LF line endings on scripts so they run after a Windows checkout; `.gitignore` excludes all `*.db` files.
+
 ## 0.7.0 — modern UI
 
 ### Changed

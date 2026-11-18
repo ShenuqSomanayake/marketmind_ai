@@ -1,0 +1,6 @@
+# Scripts and unit files run on Linux: always check them out with LF line endings, even on Windows.
+*.sh      text eol=lf
+*.service text eol=lf
+*.timer   text eol=lf
+deploy/mm text eol=lf
+*.env.example text eol=lf

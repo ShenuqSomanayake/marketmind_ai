@@ -1,4 +1,7 @@
-# MarketMind AI 0.5.0 — Deployment guide
+# MarketMind AI 0.7.1 — Deployment guide
+
+> **Recommended for personal use:** a private always-on server reachable only through Tailscale. Follow `deploy/README.md`; the scripts in `deploy/` do the work.
+
 
 ## Important before publishing
 

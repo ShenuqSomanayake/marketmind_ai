@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+# Run a MarketMind admin command against the live database, e.g.
+#   sudo mm grant-admin shenuq     sudo mm list-users     sudo mm reset-password shenuq     sudo mm backup
+set -euo pipefail
+[ "$(id -u)" -eq 0 ] || { echo "Run with sudo."; exit 1; }
+set -a
+# shellcheck disable=SC1091
+. /etc/marketmind.env
+set +a
+cd /opt/marketmind
+exec sudo -u marketmind env HOME=/var/lib/marketmind MARKETMIND_DB_PATH="$MARKETMIND_DB_PATH" .venv/bin/python -m marketmind.manage "$@"

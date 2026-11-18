@@ -1,0 +1,30 @@
+[Unit]
+Description=MarketMind AI (Streamlit)
+After=network-online.target tailscaled.service
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=marketmind
+Group=marketmind
+WorkingDirectory=/opt/marketmind
+EnvironmentFile=/etc/marketmind.env
+Environment=HOME=/var/lib/marketmind
+ExecStart=/opt/marketmind/.venv/bin/streamlit run app.py --server.port 8501 --server.address 0.0.0.0 --server.headless true --browser.gatherUsageStats false
+Restart=always
+RestartSec=5
+
+# Hardening: the app can only write to its data folder.
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+ReadWritePaths=/var/lib/marketmind
+ProtectKernelTunables=true
+ProtectKernelModules=true
+ProtectControlGroups=true
+RestrictSUIDSGID=true
+LockPersonality=true
+
+[Install]
+WantedBy=multi-user.target

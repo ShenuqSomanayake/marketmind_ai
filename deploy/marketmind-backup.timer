@@ -1,0 +1,10 @@
+[Unit]
+Description=Run the MarketMind AI backup every night
+
+[Timer]
+OnCalendar=*-*-* 03:30:00 Australia/Perth
+Persistent=true
+RandomizedDelaySec=10min
+
+[Install]
+WantedBy=timers.target

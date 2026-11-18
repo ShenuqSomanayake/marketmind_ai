@@ -7,3 +7,6 @@ marketmind.db
 .env
 .DS_Store
 backups/
+*.db
+*.db-journal
+.ruff_cache/

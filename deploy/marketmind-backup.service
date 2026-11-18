@@ -1,0 +1,17 @@
+[Unit]
+Description=MarketMind AI daily database backup
+
+[Service]
+Type=oneshot
+User=marketmind
+Group=marketmind
+WorkingDirectory=/opt/marketmind
+EnvironmentFile=/etc/marketmind.env
+Environment=HOME=/var/lib/marketmind
+ExecStart=/opt/marketmind/.venv/bin/python -m marketmind.manage backup
+# Keep 14 days of backups.
+ExecStartPost=/usr/bin/find /var/lib/marketmind/backups -name "marketmind-*.db" -mtime +14 -delete
+NoNewPrivileges=true
+ProtectSystem=strict
+ProtectHome=true
+ReadWritePaths=/var/lib/marketmind
