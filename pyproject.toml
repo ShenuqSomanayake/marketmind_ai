@@ -1,7 +1,7 @@
 [project]
 name = "marketmind-ai"
 version = "0.7.1"
-requires-python = ">=3.10"
+requires-python = ">=3.11"
 
 [tool.pytest.ini_options]
 pythonpath = [".", "tests"]

@@ -13,7 +13,7 @@ and every number the AI writes is checked against computed facts.
 
 ## Quick start
 
-Python 3.10+.
+Python 3.11+.
 
 ```bash
 python -m venv .venv
@@ -82,7 +82,7 @@ ruff check . && ruff format --check .
 python -m pytest -q          # 149 tests: engine maths, patterns (incl. no-look-ahead), backtest, auth, insights, practice, backups, every UI page
 ```
 
-`tests/test_ui.py` drives every page through Streamlit's `AppTest` with network calls stubbed. CI runs on Python 3.10–3.13 (`.github/workflows/ci.yml`).
+`tests/test_ui.py` drives every page through Streamlit's `AppTest` with network calls stubbed. CI runs on Python 3.11–3.13 (`.github/workflows/ci.yml`).
 
 ## Layout
 
