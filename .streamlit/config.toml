@@ -1,0 +1,26 @@
+[theme]
+base = "dark"
+primaryColor = "#7C6CFF"
+backgroundColor = "#0A0E17"
+secondaryBackgroundColor = "#121826"
+textColor = "#E6EAF2"
+linkColor = "#9D90FF"
+borderColor = "#1E2636"
+showWidgetBorder = true
+baseRadius = "0.75rem"
+buttonRadius = "0.65rem"
+font = "Inter:https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap, sans-serif"
+codeFont = "JetBrains Mono:https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap, monospace"
+dataframeHeaderBackgroundColor = "#151C2B"
+chartCategoricalColors = ["#7C6CFF", "#2DD4BF", "#F59E0B", "#F472B6", "#60A5FA", "#A3E635", "#FB7185", "#C084FC"]
+
+[theme.sidebar]
+backgroundColor = "#0D1220"
+secondaryBackgroundColor = "#141B2B"
+borderColor = "#1A2232"
+
+[client]
+toolbarMode = "minimal"
+
+[server]
+headless = true

@@ -1,0 +1,9 @@
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+marketmind.db
+.streamlit/secrets.toml
+.env
+.DS_Store
+backups/
